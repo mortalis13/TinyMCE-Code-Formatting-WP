@@ -7,7 +7,7 @@ add_action( 'admin_menu', 'mcecode_options_add_page' );
  * Init plugin options to white list our options
  */
 function mcecode_options_init(){
-  register_setting('mcecode_options_group', 'mcecode_options');
+  register_setting('mcecode_options_group', 'mcecode_options', 'mcecode_options_validate');
 }
 
 /**
@@ -51,27 +51,23 @@ function mcecode_options_do_page() {
 /**
  * Validation function for checkboxes and textarea
  */
-function mcecode_options_validate( $input ) {
-  $checkboxes=array(
-    'disable_image_cropping',
-    'use_custom_css',
-    'use_category_colors'
-  );
-  
-  foreach($checkboxes as $ch){
-    if(!isset($input[$ch])) $input[$ch] = null;
-    $input[$ch]=($input[$ch]? 1 : 0 );
-  }
-  
-  $input['custom_css'] = wp_filter_post_kses( $input['custom_css'] );
+function mcecode_options_validate($input) {
+  $input['pre_shortcut'] = sanitize_text_field( $input['pre_shortcut'] );
+  $input['code_shortcut'] = sanitize_text_field( $input['code_shortcut'] );
   
   return $input;
 }
 
+/*
+ * Sanitizes text options from the database
+ */
 function mcecode_text_opt($name){
   echo sanitize_text_field(mcecode_opt($name));
 }
 
+/*
+ * Gets option value from the database by its name
+ */
 function mcecode_opt($name){
   $options = get_option( 'mcecode_options' );
   if($options && isset($options[$name]))

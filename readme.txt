@@ -1,4 +1,5 @@
 === TinyMCE Code Formatting ===
+Contributors: mortalis
 Tags: formatting, tinymce, editor, shortcut, button, pre, code
 Requires at least: 4.1
 Tested up to: 4.1
@@ -10,26 +11,31 @@ Adds the Pre and Code buttons to the TinyMCE toolbar with customizable shortcuts
 
 == Description ==
 
-The Pre button toggles the preformatted style on the selected text or the current line (applies <pre> tag to blocks).
-The Code button toggles the code style on the selected text or the current word (applies <code> tag to inline elements).
+The **Pre** button toggles the preformatted style on the selected text or the current line (applies `<pre>` tag to blocks).  
+The **Code** button toggles the code style on the selected text or the current word (applies `<code>` tag to inline elements).
 
 The default shortcuts for the buttons are:
-Ctrl+Q - Pre
-Ctrl+D - Code
 
-In the admin Settings submenu it's possible to change these shortcuts. Type any shortcut combination in the fields with the Ctrl key included. Some combinations may conflict with the default editor or browser shortcuts. So check them on your instance. 
+- Ctrl+Q - Pre
+- Ctrl+D - Code
 
-You may use these types of shortcuts:
-- Ctrl+B, .., Z (except AXCV)
-- Ctrl+0, .., 9
-- Ctrl+[symbols] (-=`[];'\/,.)
-- Ctrl+F1
-- Ctrl+Pad0, .., Pad9
-- Ctrl+Pad/, Pad*, Pad+, Pad.
+In the admin **Settings submenu** it's possible to **change** these shortcuts.  
+Press a key combination in the text fields with the **Ctrl** key included and the text will be filled automatically. Or you can type it manually.  
 
-- Ctrl+Shift+...
-- Ctrl+Alt+...
-- Ctrl+Shift+Alt...
+Some combinations may *conflict* with the *default* editor or browser shortcuts.  
+So check them on your instance.  
+
+You may use these types of shortcuts:  
+
+- `Ctrl+B, .., Z (except AXCV)`
+- `Ctrl+0, .., 9`
+- ``Ctrl+[symbols] (-=`[];'\/,.)``
+- `Ctrl+F1, .., F12`
+- `Ctrl+Pad0, .., Pad9`
+- `Ctrl+Pad/, Pad*, Pad+, Pad.`
+- `Ctrl+Shift+...`
+- `Ctrl+Alt+...`
+- `Ctrl+Shift+Alt+...`
 
 
 == Installation ==
