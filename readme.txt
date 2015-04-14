@@ -37,6 +37,7 @@ You may use these types of shortcuts:
 - `Ctrl+Alt+...`
 - `Ctrl+Shift+Alt+...`
 
+This plugin GitHub repository: https://github.com/mortalis13/tinymce-code-formatting.
 
 == Installation ==
 
